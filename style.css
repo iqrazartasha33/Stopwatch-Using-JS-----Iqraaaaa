@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, rgb(246, 31, 174), #feb47b);
+  }
+  
+  .container {
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    position: relative;
+    animation: neonGlow 2s linear infinite;
+    border: 3px solid transparent;
+    border-image: linear-gradient(45deg, #f6ff00, purple, #00ffea, #ff007d, #ff3d00);
+    border-image-slice: 1;
+  }
+  
+  @keyframes neonGlow {
+    0% {
+      box-shadow: 0 0 10px #ff007d, 0 0 20px #ff007d, 0 0 30px #ff007d, 0 0 40px blue, 0 0 70px #00ffea, 0 0 80px #f6ff00, 0 0 100px #ff007d;
+    }
+    50% {
+      box-shadow: 0 0 20px purple, 0 0 30px #00ffea, 0 0 40px #f6ff00, 0 0 50px #ff007d, 0 0 60px #00ffea, 0 0 70px #761ff7, 0 0 80px #f6ff00;
+    }
+    100% {
+      box-shadow: 0 0 10px #ff3d00, 0 0 20px #00ffea, 0 0 30px #f6ff00, 0 0 40px #ff007d, 0 0 70px #f431a3, 0 0 80px #f6ff00, 0 0 100px #00ffea;
+    }
+  }
+  #display {
+    font-size: 2.5em;
+    margin: 20px 0;
+    background: linear-gradient(to right, #ff31f6, grey,black,blue);
+    -webkit-background-clip: text;
+    background-clip: text; 
+    color: transparent;
+  }
+  
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, purple, rgb(164, 11, 235));
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, rgb(22, 186, 227), blue);
+  }
+  
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+      transform: translateY(-20px) scale(0.8);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  .animated-text {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: black;
+    animation: fadeInOut 3s infinite ease-in-out;
+  }

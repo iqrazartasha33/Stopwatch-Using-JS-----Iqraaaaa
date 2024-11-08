@@ -55,7 +55,7 @@
     border: none;
     border-radius: 25px;
     background: linear-gradient(135deg, purple, rgb(164, 11, 235));
-    color: black;
+    color: white;
     cursor: pointer;
     transition: all 0.3s ease;
   }
